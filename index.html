@@ -92,16 +92,32 @@
             rel="stylesheet"
             href="./assets/fonts/themify-icons/themify-icons.css"
         />
+
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- Header -->
+        <!-- PC Header -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="navbar">
+                    <!-- tabket/mobile menu -->
+                    <label for="menu__checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                        </label>
                     <!-- Logo -->
                     <a href="#"
-                        ><img src="./assets/img/Logo.svg" alt="Besnik."
+                        ><img
+                            class="heading__logo"
+                            src="./assets/img/Logo.svg"
+                            alt="Besnik."
                     /></a>
 
                     <!-- Navigation -->
@@ -122,6 +138,32 @@
                 </nav>
             </div>
         </header>
+        <!-- tablet/mobile header -->
+         <header class="mobile-header">
+            <input type="checkbox" name="" id="menu__checkbox" class="menu__checkbox" hidden>
+            <!-- overlay -->
+            <label class="menu-overlay" for="menu__checkbox"></label>
+            <!-- menu content -->
+             <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#"
+                ><img
+                    class="menu-drawer__logo"
+                    src="./assets/img/Logo.svg"
+                    alt="Besnik."
+            /></a>
+             <!-- Navigation -->
+             <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="hide-on-tablet"><a href="#!">Sign In</a></li>
+                <li class="hide-on-tablet"><a href="#!">Sign Up</a></li>
+            </ul>
+             </div>
+         </header>
         <main id="home">
             <!-- Hero -->
             <div class="hero-wrap">
@@ -166,7 +208,7 @@
                         <p class="desc">
                             More than 45,000+ companies trust besnik
                         </p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="images">
                         <a href="https://www.meundies.com/" target="”_blank">
@@ -283,11 +325,11 @@
                                 Everything you need to know when you're looking
                             </p>
                             <a href="" class="link">
-                                <span>View All Properties</span>
+                                <span class="hide-on-mobile">View All Properties</span>
                                 <img
                                     src="./assets/img/arrow-right.svg"
                                     alt="arrow-right"
-                                    class="arrow"
+                                    class="arrow hide-on-mobile"
                                 />
                             </a>
                         </div>
@@ -610,7 +652,7 @@
                         <img
                             src="./assets/img/newletter.svg"
                             alt=""
-                            class="image"
+                            class="image hide-on-mobile"
                         />
                     </div>
                 </div>
